@@ -16,17 +16,20 @@ class _SplashState extends State<Splash> {
 
     SystemChrome.setEnabledSystemUIOverlays([]);
 
-    // _checkAuth().then(
-    //   (_) => {
-    //     Navigator.pushReplacementNamed(context, '/welcome'),
-    //   },
-    // );
+    _checkAuth().then(
+      (_) => {
+        Navigator.pushReplacementNamed(context, '/welcome'),
+      },
+    );
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Container(
+    return Scaffold(body: bodyPage());
+  }
+
+  Widget bodyPage() {
+    return Container(
       width: double.maxFinite,
       color: Colors.black,
       child: Column(
@@ -46,7 +49,7 @@ class _SplashState extends State<Splash> {
           ),
         ],
       ),
-    ));
+    );
   }
 
   Future<String> _checkAuth() async {
