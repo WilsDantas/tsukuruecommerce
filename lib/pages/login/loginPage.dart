@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:tsukuru_e_commerce/widgets/BackButtonWidget.dart';
+import '../../widgets/TitleWidget.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -28,7 +29,7 @@ class _LoginPageState extends State<LoginPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   SizedBox(height: height * .2),
-                  _title(),
+                  TitleWidget(),
                   SizedBox(height: 50),
                   Column(
                     children: <Widget>[
@@ -54,27 +55,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
           ),
-          Positioned(top: 40, left: 0, child: _backButton()),
-        ],
-      ),
-    );
-  }
-
-  Widget _title() {
-    return RichText(
-      textAlign: TextAlign.center,
-      text: TextSpan(
-        text: 'Tsu',
-        style: GoogleFonts.portLligatSans(
-          fontSize: 30,
-          fontWeight: FontWeight.w700,
-          color: Theme.of(context).primaryColor,
-        ),
-        children: [
-          TextSpan(
-            text: 'kuru',
-            style: TextStyle(color: Colors.black, fontSize: 30),
-          ),
+          Positioned(top: 40, left: 0, child: BackButtonWidget()),
         ],
       ),
     );
@@ -200,15 +181,18 @@ class _LoginPageState extends State<LoginPage> {
               decoration: BoxDecoration(
                 color: Color(0xff2872ba),
                 borderRadius: BorderRadius.only(
-                    bottomRight: Radius.circular(5),
-                    topRight: Radius.circular(5)),
+                  bottomRight: Radius.circular(5),
+                  topRight: Radius.circular(5),
+                ),
               ),
               alignment: Alignment.center,
-              child: Text('Log in with Facebook',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w400)),
+              child: Text(
+                'Log in with Facebook',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w400),
+              ),
             ),
           ),
         ],
@@ -242,27 +226,6 @@ class _LoginPageState extends State<LoginPage> {
                   fontSize: 13,
                   fontWeight: FontWeight.w600),
             ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _backButton() {
-    return InkWell(
-      onTap: () {
-        Navigator.pop(context);
-      },
-      child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 10),
-        child: Row(
-          children: <Widget>[
-            Container(
-              padding: EdgeInsets.only(left: 0, top: 10, bottom: 10),
-              child: Icon(Icons.keyboard_arrow_left, color: Colors.black),
-            ),
-            Text('Back',
-                style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500))
           ],
         ),
       ),
