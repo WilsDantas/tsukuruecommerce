@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:tsukuru_e_commerce/pages/cart/cart.dart';
-import 'package:tsukuru_e_commerce/pages/index/index.dart';
-import 'package:tsukuru_e_commerce/pages/login/loginPage.dart';
-import 'package:tsukuru_e_commerce/pages/register/register.dart';
-import 'package:tsukuru_e_commerce/pages/splash/splash.dart';
-import 'package:tsukuru_e_commerce/pages/welcome/welcomePage.dart';
+
+import './pages/cart/cart.dart';
+import './pages/index/index.dart';
+import './pages/login/loginPage.dart';
+import './pages/profile/profile.dart';
+import './pages/register/register.dart';
+import './pages/splash/splash.dart';
+import './pages/welcome/welcomePage.dart';
 
 // Pages
 
@@ -16,5 +18,6 @@ class Routes {
     '/register': (context) => RegisterPage(),
     '/index': (context) => ShoppingIndexPage(),
     '/cart': (context) => CartPage(),
+    '/profile': (context) => ProfilePage(),
   };
 }

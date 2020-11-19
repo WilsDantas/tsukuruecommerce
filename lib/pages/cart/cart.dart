@@ -17,7 +17,7 @@ class _CartPageState extends State<CartPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Carrinho'),
+        title: Text('Carrinho de Compras'),
         centerTitle: false,
         actions: [
           AppBarIcon(),
