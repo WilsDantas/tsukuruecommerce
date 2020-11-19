@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import './pages/myData/myData.dart';
 import './pages/cart/cart.dart';
 import './pages/index/index.dart';
 import './pages/login/loginPage.dart';
@@ -19,5 +20,6 @@ class Routes {
     '/index': (context) => ShoppingIndexPage(),
     '/cart': (context) => CartPage(),
     '/profile': (context) => ProfilePage(),
+    '/myData': (context) => MyDataPage(),
   };
 }

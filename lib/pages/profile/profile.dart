@@ -111,6 +111,7 @@ class _ProfilePageState extends State<ProfilePage> {
         Navigator.pushNamed(context, url);
       },
       child: Container(
+        color: Colors.transparent,
         width: double.maxFinite,
         padding: EdgeInsets.all(5),
         child: Row(
