@@ -59,11 +59,16 @@ class _ShoppingIndexPageState extends State<ShoppingIndexPage> {
             style: TextStyle(
                 color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
           ),
-          Text(
-            'Ver Todos',
-            style: TextStyle(
-              color: Colors.blue[300],
-              fontSize: 15,
+          GestureDetector(
+            onTap: () {
+              // TODO "VER TODOS"
+            },
+            child: Text(
+              'Ver Todos',
+              style: TextStyle(
+                color: Colors.blue[300],
+                fontSize: 15,
+              ),
             ),
           ),
         ],

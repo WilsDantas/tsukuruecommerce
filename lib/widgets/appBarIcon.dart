@@ -8,6 +8,8 @@ class AppBarIcon extends StatefulWidget {
 }
 
 class _AppBarIconState extends State<AppBarIcon> {
+  int notification = 5;
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -16,46 +18,46 @@ class _AppBarIconState extends State<AppBarIcon> {
       },
       child: Padding(
         padding: const EdgeInsets.all(10.0),
-        child: new Container(
+        child: Container(
           height: 150.0,
           width: 30.0,
-          child: new Stack(
+          child: Stack(
             children: <Widget>[
-              new IconButton(
-                icon: new Icon(
+              IconButton(
+                icon: Icon(
                   Icons.notifications,
                   color: Colors.black,
                 ),
                 onPressed: () {
                   Navigator.pushNamed(context, '/notifications');
                 },
-              
               ),
-              false
-                  ? new Container()
-                  : new Positioned(
-                      child: new Stack(
-                      children: <Widget>[
-                        new Icon(
-                          Icons.brightness_1,
-                          size: 20.0,
-                          color: Colors.blue[300],
-                        ),
-                        new Positioned(
-                            top: 4.0,
-                            right: 6.0,
-                            child: new Center(
-                              child: new Text(
-                                '5',
-                                style: new TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 11.0,
-                                  fontWeight: FontWeight.w500,
+              notification <= 0
+                  ? Container()
+                  : Positioned(
+                      child: Stack(
+                        children: <Widget>[
+                          Icon(
+                            Icons.brightness_1,
+                            size: 20.0,
+                            color: Colors.blue[300],
+                          ),
+                          Positioned(
+                              top: 4.0,
+                              right: 6.0,
+                              child: Center(
+                                child: Text(
+                                  notification.toString(),
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 11.0,
+                                    fontWeight: FontWeight.w500,
+                                  ),
                                 ),
-                              ),
-                            )),
-                      ],
-                    )),
+                              )),
+                        ],
+                      ),
+                    ),
             ],
           ),
         ),

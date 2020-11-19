@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tsukuru_e_commerce/pages/cart/cart.dart';
 import 'package:tsukuru_e_commerce/pages/index/index.dart';
 import 'package:tsukuru_e_commerce/pages/login/loginPage.dart';
 import 'package:tsukuru_e_commerce/pages/register/register.dart';
@@ -14,5 +15,6 @@ class Routes {
     '/login': (context) => LoginPage(),
     '/register': (context) => RegisterPage(),
     '/index': (context) => ShoppingIndexPage(),
+    '/cart': (context) => CartPage(),
   };
 }
