@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tsukuru_e_commerce/pages/payment/payment.dart';
 
 
 import './pages/historic/historic.dart';
@@ -24,5 +25,6 @@ class Routes {
     '/profile': (context) => ProfilePage(),
     '/myData': (context) => MyDataPage(),
     '/historic': (context) => HistoricPage(),
+    '/payment': (context) => PaymentPage(),
   };
 }
