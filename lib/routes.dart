@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tsukuru_e_commerce/pages/favorites/favorite.dart';
 
 
 import './pages/payment/payment.dart';
@@ -28,5 +29,7 @@ class Routes {
     '/historic': (context) => HistoricPage(),
     '/payment': (context) => PaymentPage(),
     '/paymentAdd': (context) => PaymentAddPage(),
+    '/favorites': (context) => FavoritePage(),
+
   };
 }
