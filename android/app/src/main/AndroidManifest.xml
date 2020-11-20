@@ -9,6 +9,9 @@
         android:name="io.flutter.app.FlutterApplication"
         android:label="tsukuru_e_commerce"
         android:icon="@mipmap/ic_launcher">
+        <meta-data android:name="com.google.android.geo.API_KEY"
+                    android:value="AIzaSyDHjMMOgsfiz9bt2bxi1XWrwPtpaHzLGjk"/>
+
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

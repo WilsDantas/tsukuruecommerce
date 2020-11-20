@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 
 import 'package:tsukuru_e_commerce/pages/favorites/favorite.dart';
+import 'package:tsukuru_e_commerce/pages/location/location.dart';
 import 'package:tsukuru_e_commerce/pages/notifications/notification.dart';
 
 
@@ -33,7 +34,8 @@ class Routes {
     '/payment': (context) => PaymentPage(),
     '/paymentAdd': (context) => PaymentAddPage(),
     '/favorites': (context) => FavoritePage(),
-    '/notifications': (context) => NotificationPage()
+    '/notifications': (context) => NotificationPage(),
+    '/location': (context) => LocationPage()
 
   };
 }
