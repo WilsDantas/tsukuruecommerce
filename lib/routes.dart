@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:tsukuru_e_commerce/pages/favorites/favorite.dart';
 import 'package:tsukuru_e_commerce/pages/location/location.dart';
 import 'package:tsukuru_e_commerce/pages/notifications/notification.dart';
+import 'package:tsukuru_e_commerce/pages/productDetail/productDetail.dart';
 
 
 import './pages/payment/payment.dart';
@@ -35,7 +36,8 @@ class Routes {
     '/paymentAdd': (context) => PaymentAddPage(),
     '/favorites': (context) => FavoritePage(),
     '/notifications': (context) => NotificationPage(),
-    '/location': (context) => LocationPage()
+    '/location': (context) => LocationPage(),
+    '/ProductDetail': (context) => ProductDetailPage(),
 
   };
 }

@@ -19,11 +19,12 @@ class _BackButtonWidgetState extends State<BackButtonWidget> {
         child: Row(
           children: <Widget>[
             Container(
-              padding: EdgeInsets.only(left: 0, top: 10, bottom: 10),
-              child: Icon(Icons.keyboard_arrow_left, color: Colors.black),
+              child: Icon(Icons.keyboard_arrow_left, color: Colors.black, size: 30,),
             ),
-            Text('Back',
-                style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500))
+            // Text(
+            //   'Back',
+            //   style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+            // ),
           ],
         ),
       ),
