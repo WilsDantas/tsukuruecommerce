@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tsukuru_e_commerce/pages/AppSearch/app_search.dart';
 
 
 import 'package:tsukuru_e_commerce/pages/favorites/favorite.dart';
@@ -38,6 +39,6 @@ class Routes {
     '/notifications': (context) => NotificationPage(),
     '/location': (context) => LocationPage(),
     '/ProductDetail': (context) => ProductDetailPage(),
-
+    '/AppSearch': (context) => AppSearch(),
   };
 }

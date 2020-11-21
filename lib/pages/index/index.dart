@@ -12,23 +12,41 @@ class ShoppingIndexPage extends StatefulWidget {
 }
 
 class _ShoppingIndexPageState extends State<ShoppingIndexPage> {
+  Icon cusIcon = Icon(Icons.search);
+  Widget cusSearchBar = Text('Bem vindo a Tsukuru');
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Bem Vindo a Tsukuru'),
+        title: cusSearchBar,
         centerTitle: false,
         actions: [
-          AppBarIcon(),
           IconButton(
-            icon: Icon(
-              Icons.search,
-              color: Colors.black,
-            ),
+            icon: cusIcon,
             onPressed: () {
-              Navigator.pushNamed(context, '/BarSearch');
+              setState(
+                () {
+                  if (this.cusIcon.icon == Icons.search) {
+                    this.cusIcon = Icon(Icons.cancel);
+                    this.cusSearchBar = TextField(
+                      onSubmitted: (value) {
+                        Navigator.pushNamed(context, '/AppSearch');
+                      },
+                      decoration: InputDecoration(
+                          border: InputBorder.none, hintText: 'Pesquise Aqui!'),
+                      textInputAction: TextInputAction.go,
+                      style: TextStyle(color: Colors.white, fontSize: 16.0),
+                    );
+                  } else {
+                    this.cusIcon = Icon(Icons.search);
+                    this.cusSearchBar = Text('Bem vindo a Tsukuru');
+                  }
+                },
+              );
             },
-          )
+          ),
+          AppBarIcon(),
         ],
       ),
       body: bodyPage(),
