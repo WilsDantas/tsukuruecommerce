@@ -1,6 +1,7 @@
 # tsukuru_e_commerce
 
 Aplicativo de E_Commerce feito em Flutter
+Aplicativo de E Commerce que em breve terá a opção de você criar o proprio modelo da camisa e mandar para fabricação
 
 ## Packages
 
